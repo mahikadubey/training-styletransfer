@@ -112,6 +112,7 @@ def check_opts(opts):
 
 def _get_files(img_dir):
     files = list_files(img_dir)
+    print([os.path.join(img_dir,x) for x in files])
     return [os.path.join(img_dir,x) for x in files]
 
 
@@ -128,7 +129,6 @@ def main():
     elif options.test:
         content_targets = [options.test]
 
-    print(options.slow)
 
     kwargs = {
         "slow":options.slow,
