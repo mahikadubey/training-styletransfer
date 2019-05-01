@@ -5,7 +5,7 @@ python style.py --style images/bruises_giorgialupi.jpg \
   --checkpoint-dir checkpoints/ \
   --vgg-path /styletransfer/data/imagenet-vgg-verydeep-19.mat \
   --train-path /datasets/coco/ \
-  --model-dir artifacts/ \
+  --model-dir /artifacts/ \
   --test images/violetaparra.jpg \
   --test-dir tests/ \
   --content-weight 1.5e1 \
