@@ -19,7 +19,7 @@ def optimize(content_targets, style_target, content_weight, style_weight,
     mod = len(content_targets) % batch_size
     if mod > 0:
         print("Train set has been trimmed slightly..")
-        content_targets = content_targets[:-mod] 
+        content_targets = content_targets[:-mod]
 
     style_features = {}
 
@@ -135,6 +135,15 @@ def optimize(content_targets, style_target, content_weight, style_weight,
                     else:
                        saver = tf.train.Saver()
                        res = saver.save(sess, save_path)
+
+                    print("preds")
+                    print(_preds)
+                    print("losses")
+                    print(losses)
+                    print("iterations")
+                    print(iterations)
+                    print("epoch")
+                    print(epoch)
                     yield(_preds, losses, iterations, epoch)
 
 def _tensor_size(tensor):
