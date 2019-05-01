@@ -1,7 +1,7 @@
 #! /bin/bash
 
 export PYTHONUNBUFFERED=0
-python style.py --style images/aldunate.jpg \
+python style.py --style images/bruises_giorgialupi.jpg \
   --checkpoint-dir checkpoints/ \
   --model-dir models/ \
   --test images/violetaparra.jpg \
