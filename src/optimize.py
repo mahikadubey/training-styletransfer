@@ -136,14 +136,6 @@ def optimize(content_targets, style_target, content_weight, style_weight,
                        saver = tf.train.Saver()
                        res = saver.save(sess, save_path)
 
-                    print("preds")
-                    print(_preds)
-                    print("losses")
-                    print(losses)
-                    print("iterations")
-                    print(iterations)
-                    print("epoch")
-                    print(epoch)
                     yield(_preds, losses, iterations, epoch)
 
 def _tensor_size(tensor):

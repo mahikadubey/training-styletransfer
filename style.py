@@ -14,7 +14,7 @@ STYLE_WEIGHT = 1e2
 TV_WEIGHT = 2e2
 
 LEARNING_RATE = 1e-3
-NUM_EPOCHS = 10
+NUM_EPOCHS = 2
 CHECKPOINT_DIR = 'checkpoints'
 CHECKPOINT_ITERATIONS = 2000
 VGG_PATH = 'data/imagenet-vgg-verydeep-19.mat'
@@ -127,6 +127,8 @@ def main():
         content_targets = _get_files(options.train_path)
     elif options.test:
         content_targets = [options.test]
+
+    print(content_targets)
 
     kwargs = {
         "slow":options.slow,
