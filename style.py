@@ -128,7 +128,7 @@ def main():
     elif options.test:
         content_targets = [options.test]
 
-    print(content_targets)
+    print(options.slow)
 
     kwargs = {
         "slow":options.slow,
